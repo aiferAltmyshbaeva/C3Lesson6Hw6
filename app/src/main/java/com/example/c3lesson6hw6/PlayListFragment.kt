@@ -39,9 +39,8 @@ class PlayListFragment : Fragment() {
 
 
     private fun onClick(play: PlayList) {
-        val bundle = Bundle().apply {
-            putSerializable("play", play)
-        }
+        val bundle = Bundle()
+            bundle.putSerializable("play", play)
         val fragment = DetailFragment()
         fragment.arguments = bundle
         requireActivity().supportFragmentManager.beginTransaction()

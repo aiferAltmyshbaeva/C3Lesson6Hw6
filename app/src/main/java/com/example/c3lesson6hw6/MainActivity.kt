@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportFragmentManager.beginTransaction().add(R.id.top_container, PosterFragment())
+        supportFragmentManager.beginTransaction().add(R.id.container_poster, PosterFragment())
             .addToBackStack(null).commit()
-        supportFragmentManager.beginTransaction().add(R.id.top_container, PlayListFragment())
+        supportFragmentManager.beginTransaction().add(R.id.container_playlist, PlayListFragment())
             .addToBackStack(null).commit()
     }
 }

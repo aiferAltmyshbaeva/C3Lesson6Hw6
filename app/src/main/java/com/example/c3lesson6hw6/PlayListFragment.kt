@@ -27,7 +27,7 @@ class PlayListFragment : Fragment(), OnItemClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPlayListBinding.inflate(layoutInflater)
+        binding = FragmentPlayListBinding.inflate(inflater,container, false)
         return binding.root
     }
 

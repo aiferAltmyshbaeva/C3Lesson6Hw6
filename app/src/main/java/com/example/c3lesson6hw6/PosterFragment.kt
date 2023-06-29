@@ -16,7 +16,7 @@ class PosterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPosterBinding.inflate(layoutInflater)
+        binding = FragmentPosterBinding.inflate(inflater, container, false)
         return binding.root
     }
 

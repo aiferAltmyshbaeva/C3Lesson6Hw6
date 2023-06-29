@@ -23,6 +23,9 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val result: PlayList? = requireArguments().getSerializable("play") as PlayList?
+        if (result != null) {
+            binding.tvDetail.text = result.songTitle
+        }
     }
 
 }

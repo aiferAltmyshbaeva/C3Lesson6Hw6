@@ -9,4 +9,5 @@
     <string name="singer_name">Singer Name</string>
     <string name="song_title">Song Title</string>
     <string name="_0_00">0:00</string>
+    <string name="details">Details</string>
 </resources>

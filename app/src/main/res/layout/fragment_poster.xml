@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PosterFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img_poster"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_album_cover"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        android:id="@+id/tv_now_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:layout_marginHorizontal="24dp"
+        android:id="@+id/tv_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/talk_me_down"
+        android:textColor="@color/gray"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_album"/>
+
+    <TextView
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/tv_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/blue_neighbourhood"
+        android:textStyle="italic"
+        android:textColor="@color/gray"
+        android:textSize="24sp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -8,12 +8,12 @@ import com.example.c3lesson6hw6.databinding.ItemPlaylistBinding
 
 class PlayListAdapter (
     val list: ArrayList<PlayList>,
-    val onItemClickListener: OnItemClickListener
+    private val onClick: (PlayList) -> Unit
 
-        ): Adapter<PlayListAdapter.ViewHolder>() {
+        ): RecyclerView.Adapter<PlayListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemPlaylistBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(ItemPlaylistBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
     override fun getItemCount() = list.size
@@ -31,7 +31,9 @@ class PlayListAdapter (
             tvSingerName.text = singer
             tvLength.text = songLength
         }
-        itemView.setOnClickListener { onItemClickListener.onItemClick(adapterPosition) }
+        itemView.setOnClickListener {
+            onClick(item)
+        }
     }
     }
 }

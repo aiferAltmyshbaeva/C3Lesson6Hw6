@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.c3lesson6hw6.databinding.FragmentPlayListBinding
 
-class PlayListFragment : Fragment(), OnItemClickListener {
+class PlayListFragment : Fragment() {
 
     private lateinit var binding: FragmentPlayListBinding
     private val playList = arrayListOf(
@@ -33,12 +33,12 @@ class PlayListFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = PlayListAdapter(playList, this)
+        val adapter = PlayListAdapter(playList, this::onClick)
         binding.rvPlaylist.adapter = adapter
     }
 
-    override fun onItemClick(position: Int) {
-        val play = playList[position]
+
+    private fun onClick(play: PlayList) {
         val bundle = Bundle().apply {
             putSerializable("play", play)
         }

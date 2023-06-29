@@ -39,7 +39,7 @@ class PlayListFragment : Fragment() {
 
 
     private fun onClick(play: PlayList) {
-        val bundle = Bundle()
+        val bundle: Bundle = Bundle()
             bundle.putSerializable("play", play)
         val fragment = DetailFragment()
         fragment.arguments = bundle
